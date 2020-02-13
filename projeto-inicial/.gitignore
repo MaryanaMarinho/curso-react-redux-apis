@@ -17,8 +17,32 @@
 .env.development.local
 .env.test.local
 .env.production.local
-.idea
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# System Files
+Thumbs.db
+/.idea/.gitignore
+/.idea/grid-flexbox.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
