@@ -1,20 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
-import Maryana from "./Maryana";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Maryana></Maryana>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: "Mary"
+        }
+        this.changeState = this.changeState.bind(this);
+        this.resetState = this.resetState.bind(this);
+    }
+
+    changeState() {
+        this.setState({
+            name: "Maryana Marinho"
+        });
+    }
+
+    resetState() {
+        this.setState({
+            name: "Mary"
+        });
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <div>
+                    <div>
+                        {this.state.name}
+                    </div>
+                    <button onClick={this.changeState}>Mudar estado</button>
+                    <button onClick={this.resetState}>Mudar estado</button>
+                </div>
+            </div>
+        );
+
+    }
 }
 
 export default App;
